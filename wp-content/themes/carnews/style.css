@@ -20,3 +20,15 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
+
+.inner-post-box .image-box{
+    width: 250px !important;
+}
+.headbar {
+    background: #fff;
+    padding: 10px;
+    font-size: 25px;
+    text-align: center;
+    font-weight: 700;
+    border: 1px solid #fefe3f;
+}

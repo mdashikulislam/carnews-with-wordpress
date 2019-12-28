@@ -5645,3 +5645,41 @@ textarea#comment {
 .col-md-9.ad img {
     float: right;
 }
+.pagination {
+    border-top: 1px solid #e9e9e9;
+    padding: 35px 0;
+    width: 100%;
+    text-align: center;
+}
+.pagination .nav-links {
+    display: block;
+    padding: 0 25px 15px;
+    position: relative;
+}
+.pagination .page-numbers {
+    background: #e8edf3;
+    border: 1px solid #d3d3d3;
+    color: #444;
+    display: inline-block;
+    font-size: 20px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 12px;
+    margin-right: 5px;
+}
+.pagination .page-numbers.current {
+    background: #f70009;
+    color: #fff;
+    font-size: 20px;
+    height: 47px;
+    text-align: center;
+    line-height: 47px;
+}
+.pagination .nav-links > a:hover {
+    background: #eb5424;
+    color: #fff;
+    text-decoration: none;
+}
+.screen-reader-text {
+    display: none;
+}

@@ -28,6 +28,7 @@
 	<!-- Master css File Here -->
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/master.css">
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri();?>">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -62,9 +63,10 @@
 					</div>
 					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-3 social">
 						<div class="header-top-search">
-							<form action="#">
-								<input type="text" placeholder="search">
-								<button type="submit"><i class="fa fa-search"></i></button>
+							<form action="<?php echo esc_url(home_url('/'));?>" method="post">
+<!--								<input type="text" placeholder="search">-->
+                                <input type="search" name="s" placeholder="Search"><i class="fa fa-search"></i>
+<!--								<button type="search" name="s" ><i class="fa fa-search"></i></button>-->
 							</form>
 						</div>
 					</div>
@@ -77,7 +79,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-3 logo">
-						<a href="index.html"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt=""></a>
+						<a href="<?php echo  esc_url(home_url('/'));?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt=""></a>
 						<div class="responsive-menu"></div>
 					</div>
 					<div class="col-md-9">
