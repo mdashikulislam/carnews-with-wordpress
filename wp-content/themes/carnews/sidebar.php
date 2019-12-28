@@ -12,21 +12,23 @@
 		<div class="siderbar-widget">
 			<h4 class="sidebar-widget-title">Category</h4>
 			<ul>
-				<li><a href="#">Higher Education<span>(15)</span></a></li>
-				<li><a href="#">Healthcare <span>(112)</span></a></li>
-				<li><a href="#">Senior Living <span>(4)</span></a></li>
-				<li><a href="#">Commercial <span>(14)</span></a></li>
-				<li><a href="#">Speciality <span>(90)</span></a></li>
+                <?php
+                    $args = array(
+                        'orderby' => 'slug',
+                        'parent' => 0
+                    );
+
+                    $categories = get_categories( $args );
+                    foreach ( $categories as $category ) {
+                        echo '<li><a href="' . get_category_link( $category->term_id ) . '" rel="bookmark"> <i class="glyphicon glyphicon-ok"> '  . $category->name . '</i>' . '' . $category->description . '</a></li>';
+                    }
+                ?>
 			</ul>
 		</div>
 		<div class="siderbar-widget">
 			<h4 class="sidebar-widget-title">ARCHIVES</h4>
 			<ul>
-				<li><a href="#">January 2017 <span>(15)</span></a></li>
-				<li><a href="#">Februaty 2017 <span>(112)</span></a></li>
-				<li><a href="#">March 2017 <span>(4)</span></a></li>
-				<li><a href="#">April 2017<span>(14)</span></a></li>
-				<li><a href="#">May 2017 <span>(90)</span></a></li>
+				<?php wp_get_archives(array('type'=>'monthly','limit'=>10,'order'=>'ASC'));?>
 			</ul>
 		</div>
 		<div class="siderbar-widget">
@@ -53,15 +55,6 @@
 				</div>
 			</div>
 		</div>
-		<div class="siderbar-widget">
-			<h4 class="sidebar-widget-title">Tags</h4>
-			<ul class="tag-list">
-				<li><a class="active transition7s" href="#">HTML</a></li>
-				<li><a class="transition7s" href="#">CSS3</a></li>
-				<li><a class="transition7s" href="#">PHP</a></li>
-				<li><a class="transition7s" href="#">Wordpress</a></li>
-				<li><a class="transition7s" href="#">Joomla</a></li>
-			</ul>
-		</div>
+		<?php dynamic_sidebar('widget-home-right');?>
 	</div>
 </div>

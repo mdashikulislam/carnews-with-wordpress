@@ -101,19 +101,7 @@
 				</div>
 			</div>
 			<div class="col-md-3 col-sm-6 col-xs-12">
-				<div class="footer-widget">
-					<h2 class="widget-title">Our Services</h2>
-					<ul>
-						<li><a href="#">Car repair and change service</a></li>
-						<li><a href="#">Car selling and buying service</a></li>
-						<li><a href="#">Test driving and speed test</a></li>
-						<li><a href="#">Car cleaning and washing</a></li>
-						<li><a href="#">Yearly car inspection view</a></li>
-						<li><a href="#">Car selling and buying service</a></li>
-						<li><a href="#">Test driving and speed test</a></li>
-						<li><a href="#">Car cleaning and washing</a></li>
-					</ul>
-				</div>
+				<?php dynamic_sidebar('widget-footer-bottom');?>
 			</div>
 			<div class="col-md-3 col-sm-6 col-xs-12">
 				<div class="footer-widget">
