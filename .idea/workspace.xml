@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2cca4e6e-e4eb-446e-a43d-ce9c941dcd0f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/carnews/archive.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/carnews/category.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/carnews/comments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/carnews/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/carnews/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/carnews/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/carnews/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/carnews/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/carnews/sidebar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/carnews/single.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/carnews/single.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/carnews/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/carnews/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,13 +49,15 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SearchEverywhereHistoryKey" value="works&#9;FILE&#9;file://C:/xampp/htdocs/carnews-with-wordpress/.idea/workspace.xml" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/wp-content/themes/carnews" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\carnews-with-wordpress\wp-content\themes\carnews" />
       <recent name="C:\xampp\htdocs\carnews" />
     </key>
   </component>
@@ -91,6 +91,7 @@
       <workItem from="1577514806739" duration="6798000" />
       <workItem from="1577549623572" duration="269000" />
       <workItem from="1577550540358" duration="4790000" />
+      <workItem from="1577690377112" duration="3539000" />
     </task>
     <servers />
   </component>
@@ -98,14 +99,16 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="390" y="192" key="com.intellij.ide.util.TipDialog" timestamp="1577550540290">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="548" y="274" key="com.intellij.ide.util.TipDialog" timestamp="1577690377253">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="390" y="192" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1577550540290" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1577550575040">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="548" y="274" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1577690377253" />
+    <state x="486" y="70" width="945" height="969" key="search.everywhere.popup" timestamp="1577704211516">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1577550575040" />
+    <state x="486" y="70" width="945" height="969" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1577704211516" />
   </component>
   <component name="WordPressConfiguration" enabled="true">
     <wordpressPath>C:\xampp\htdocs\carnews</wordpressPath>
