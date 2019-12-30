@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2cca4e6e-e4eb-446e-a43d-ce9c941dcd0f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/carnews/archive.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/carnews/category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/carnews/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/carnews/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/carnews/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/carnews/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/carnews/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/carnews/sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/carnews/single.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/carnews/single.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +84,11 @@
       <workItem from="1577450484452" duration="5657000" />
       <workItem from="1577514806739" duration="6798000" />
       <workItem from="1577549623572" duration="269000" />
-      <workItem from="1577550540358" duration="4790000" />
+      <workItem from="1577550540358" duration="5439000" />
+      <workItem from="1577586581011" duration="634000" />
+      <workItem from="1577715959483" duration="440000" />
+      <workItem from="1577716421364" duration="335000" />
+      <workItem from="1577718466843" duration="299000" />
     </task>
     <servers />
   </component>
@@ -98,10 +96,34 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="390" y="192" key="com.intellij.ide.util.TipDialog" timestamp="1577550540290">
+    <state x="275" y="26" key="#Notifications" timestamp="1577716461229">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="390" y="192" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1577550540290" />
+    <state x="275" y="26" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1577716461229" />
+    <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577716397517">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1577716397517" />
+    <state x="129" y="60" width="1092" height="609" key="DiffContextDialog" timestamp="1577718765312">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="129" y="60" width="1092" height="609" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1577718765312" />
+    <state x="400" y="101" key="VcsDiffUtil.ChangesDialog" timestamp="1577718764003">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="400" y="101" key="VcsDiffUtil.ChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1577718764003" />
+    <state x="390" y="192" key="com.intellij.ide.util.TipDialog" timestamp="1577718475739">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="390" y="192" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1577718475739" />
+    <state x="472" y="168" key="git4idea.merge.GitMergeDialog" timestamp="1577716385172">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="472" y="168" key="git4idea.merge.GitMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1577716385172" />
+    <state x="355" y="168" key="git4idea.merge.GitPullDialog" timestamp="1577718671392">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="355" y="168" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1577718671392" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1577550575040">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
