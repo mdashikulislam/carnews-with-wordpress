@@ -1,128 +1,55 @@
 <?php
 /**
- * The template for displaying comments
+ * The template for displaying Comments.
  *
- * This is the template that displays the area of the page that contains both the current comments
- * and the comment form.
+ * The area of the page that contains comments and the comment form.
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package WordPress
- * @subpackage Twenty_Nineteen
- * @since 1.0.0
+ * @package carnews
  */
-
+ 
 /*
- * If the current post is protected by a password and
- * the visitor has not yet entered the password we will
- * return early without loading the comments.
-*/
-if ( post_password_required() ) {
-	return;
-}
-
-$discussion = twentynineteen_get_discussion_data();
+ * If the current post is protected by a password and the visitor has not yet
+ * entered the password we will return early without loading the comments.
+ */
+if ( post_password_required() )
+    return;
 ?>
-
-<div id="comments" class="<?php echo comments_open() ? 'comments-area' : 'comments-area comments-closed'; ?>">
-	<div class="<?php echo $discussion->responses > 0 ? 'comments-title-wrap' : 'comments-title-wrap no-responses'; ?>">
-		<h2 class="comments-title">
-		<?php
-		if ( comments_open() ) {
-			if ( have_comments() ) {
-				_e( 'Join the Conversation', 'twentynineteen' );
-			} else {
-				_e( 'Leave a comment', 'twentynineteen' );
-			}
-		} else {
-			if ( '1' == $discussion->responses ) {
-				/* translators: %s: Post title. */
-				printf( _x( 'One reply on &ldquo;%s&rdquo;', 'comments title', 'twentynineteen' ), get_the_title() );
-			} else {
-				printf(
-					/* translators: 1: Number of comments, 2: Post title. */
-					_nx(
-						'%1$s reply on &ldquo;%2$s&rdquo;',
-						'%1$s replies on &ldquo;%2$s&rdquo;',
-						$discussion->responses,
-						'comments title',
-						'twentynineteen'
-					),
-					number_format_i18n( $discussion->responses ),
-					get_the_title()
-				);
-			}
-		}
-		?>
-		</h2><!-- .comments-title -->
-		<?php
-			// Only show discussion meta information when comments are open and available.
-		if ( have_comments() && comments_open() ) {
-			get_template_part( 'template-parts/post/discussion', 'meta' );
-		}
-		?>
-	</div><!-- .comments-title-flex -->
-	<?php
-	if ( have_comments() ) :
-
-		// Show comment form at top if showing newest comments at the top.
-		if ( comments_open() ) {
-			twentynineteen_comment_form( 'desc' );
-		}
-
-		?>
-		<ol class="comment-list">
-			<?php
-			wp_list_comments(
-				array(
-					'walker'      => new TwentyNineteen_Walker_Comment(),
-					'avatar_size' => twentynineteen_get_avatar_size(),
-					'short_ping'  => true,
-					'style'       => 'ol',
-				)
-			);
-			?>
-		</ol><!-- .comment-list -->
-		<?php
-
-		// Show comment navigation
-		if ( have_comments() ) :
-			$prev_icon     = twentynineteen_get_icon_svg( 'chevron_left', 22 );
-			$next_icon     = twentynineteen_get_icon_svg( 'chevron_right', 22 );
-			$comments_text = __( 'Comments', 'twentynineteen' );
-			the_comments_navigation(
-				array(
-					'prev_text' => sprintf( '%s <span class="nav-prev-text"><span class="primary-text">%s</span> <span class="secondary-text">%s</span></span>', $prev_icon, __( 'Previous', 'twentynineteen' ), __( 'Comments', 'twentynineteen' ) ),
-					'next_text' => sprintf( '<span class="nav-next-text"><span class="primary-text">%s</span> <span class="secondary-text">%s</span></span> %s', __( 'Next', 'twentynineteen' ), __( 'Comments', 'twentynineteen' ), $next_icon ),
-				)
-			);
-		endif;
-
-		// Show comment form at bottom if showing newest comments at the bottom.
-		if ( comments_open() && 'asc' === strtolower( get_option( 'comment_order', 'asc' ) ) ) :
-			?>
-			<div class="comment-form-flex">
-				<span class="screen-reader-text"><?php _e( 'Leave a comment', 'twentynineteen' ); ?></span>
-				<?php twentynineteen_comment_form( 'asc' ); ?>
-				<h2 class="comments-title" aria-hidden="true"><?php _e( 'Leave a comment', 'twentynineteen' ); ?></h2>
-			</div>
-			<?php
-		endif;
-
-		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() ) :
-			?>
-			<p class="no-comments">
-				<?php _e( 'Comments are closed.', 'twentynineteen' ); ?>
-			</p>
-			<?php
-		endif;
-
-	else :
-
-		// Show comment form.
-		twentynineteen_comment_form( true );
-
-	endif; // if have_comments();
-	?>
+ 
+<div id="comments" class="comments-area">
+ 
+    <?php if ( have_comments() ) : ?>
+        <h2 class="comments-title">
+            <?php comments_number( __( '<span>No</span> Comments', 'carnews' ), __( '<span>1</span> Comment', 'carnews' ), _n( '<span>%</span> Comments', '<span>%</span> Comments', get_comments_number(), 'carnews' ) ); ?>
+            
+        </h2>
+ 
+        <ol class="comment-list">
+            <?php
+                wp_list_comments( array(
+                    'style'       => 'ol',
+                    'short_ping'  => true,
+                    'avatar_size' => 74,
+                ) );
+            ?>
+        </ol><!-- .comment-list -->
+ 
+        <?php
+            // Are there comments to navigate through?
+            if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
+        ?>
+        <nav class="navigation comment-navigation" role="navigation">
+            <h1 class="screen-reader-text section-heading"><?php esc_html_e( 'Comment navigation', 'carnews' ); ?></h1>
+            <div class="nav-previous"><?php previous_comments_link( esc_url( '&larr; Older Comments', 'carnews' ) ); ?></div>
+            <div class="nav-next"><?php next_comments_link( esc_url( 'Newer Comments &rarr;', 'carnews' ) ); ?></div>
+        </nav><!-- .comment-navigation -->
+        <?php endif; // Check for comment navigation ?>
+ 
+        <?php if ( ! comments_open() && get_comments_number() ) : ?>
+        <p class="no-comments"><?php esc_html_e( 'Comments are closed.' , 'carnews' ); ?></p>
+        <?php endif; ?>
+ 
+    <?php endif; // have_comments() ?>
+ 
+    <?php comment_form(); ?>
+ 
 </div><!-- #comments -->

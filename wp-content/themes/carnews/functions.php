@@ -34,10 +34,46 @@ function mySidebarWidget(){
     ) );
 
     register_sidebar( array(
-        'name'          =>esc_html__( 'Footer Bottom Widget', 'carnews' ),
-        'description'   =>esc_html__( 'Footer Bottom Widget .....', 'carnews' ),
-        'id'            => 'widget-footer-bottom',
+        'name'          =>esc_html__( 'Footer Bottom Widget Two', 'carnews' ),
+        'description'   =>esc_html__( 'Footer Bottom Widget Two .....', 'carnews' ),
+        'id'            => 'widget-footer-bottom-two',
         'before_widget' => '<div class="footer-widget">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2> ',
+    ) );
+    register_sidebar( array(
+        'name'          =>esc_html__( 'Footer Bottom Widget One', 'carnews' ),
+        'description'   =>esc_html__( 'Footer Bottom Widget One .....', 'carnews' ),
+        'id'            => 'widget-footer-bottom-one',
+        'before_widget' => '<div class="footer-widget">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2> ',
+    ) );
+    register_sidebar( array(
+        'name'          =>esc_html__( 'Footer Bottom Widget Three', 'carnews' ),
+        'description'   =>esc_html__( 'Footer Bottom Widget Three .....', 'carnews' ),
+        'id'            => 'widget-footer-bottom-three',
+        'before_widget' => '<div class="footer-widget">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2> ',
+    ) );
+    register_sidebar( array(
+        'name'          =>esc_html__( 'Footer Bottom Widget Four', 'carnews' ),
+        'description'   =>esc_html__( 'Footer Bottom Widget Four .....', 'carnews' ),
+        'id'            => 'widget-footer-bottom-four',
+        'before_widget' => '<div class="footer-widget">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2> ',
+    ) );
+    register_sidebar( array(
+        'name'          =>esc_html__( 'Footer Top Widget ', 'carnews' ),
+        'description'   =>esc_html__( 'Footer Top Widget  .....', 'carnews' ),
+        'id'            => 'footer-top',
+        'before_widget' => '<div class="emergency-call mrb-50">',
         'after_widget'  => '</div>',
         'before_title'  => '<h2 class="widget-title">',
         'after_title'   => '</h2> ',
@@ -45,3 +81,21 @@ function mySidebarWidget(){
 }
 
 add_action('widgets_init','mySidebarWidget');
+
+//Arrange Comment Field
+function comment_filed_position_change($fields){
+    $commentFiled = $fields['comment'];
+    unset( $fields['comment']);
+    $fields['comment'] = $commentFiled;
+    return $fields;
+
+}
+add_filter('comment_form_fields','comment_filed_position_change');
+
+//Remove Comment box field
+
+function remove_website_field($fields){
+    unset($fields['url']);
+    return $fields;
+}
+add_filter('comment_form_fields','remove_website_field');

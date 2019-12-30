@@ -62,13 +62,7 @@
 						</div>
 					</div>
 					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-3 social">
-						<div class="header-top-search">
-							<form action="<?php echo esc_url(home_url('/'));?>" method="post">
-<!--								<input type="text" placeholder="search">-->
-                                <input type="search" name="s" placeholder="Search"><i class="fa fa-search"></i>
-<!--								<button type="search" name="s" ><i class="fa fa-search"></i></button>-->
-							</form>
-						</div>
+                        <?php echo get_search_form();?>
 					</div>
 				</div>
 			</div>
