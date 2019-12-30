@@ -32,3 +32,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     font-weight: 700;
     border: 1px solid #fefe3f;
 }
+.comment-form-cookies-consent{
+	display:none;
+}
